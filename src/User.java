@@ -8,4 +8,22 @@ public class User {
         this.Username = username;
         this.Password = password;
     }
+
+    public String getUsername() {
+        return Username;
+    }
+    public void setUsername(String username) {
+        this.Username = username;
+    }
+    public boolean verifyPassword(String inputPassword) {
+        if (inputPassword.equals(Password)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public static void main(String[] args){
+        User user1 = new User("Takyi", "DK123");
+        System.out.println(user1.verifyPassword("DK1253"));
+    }
 }
